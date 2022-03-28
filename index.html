@@ -11,71 +11,34 @@
 </head>
 <body>
     <div id="app">
-<h1>Events with Vue2</h1>
+<h1>Keyboard Events Handling</h1>
+<div>
+    <h3>Keyboard event handling</h3>
+    <label for="name">Name</label>
+    <input type="text" name="name"  v-on:keyup.enter="logName">
+    <label for="age">Age</label>
+    <!-- //!we can combine multiple event modifiers in one as follows separating by dot -->
+    <input type="text" name="age"  v-on:keyup.ctrl.enter="logAge">
+</div>
 
-<p>My current age:{{age}}</p>
+<div>
+<h3>Two way data binding</h3>
+<label for="title">Title</label>
+<input type="text" v-model=title>
 
-<button @click="add()">Add A year</button>
-<button v-on:click="minus()">Subtract A year</button>
-<button @dblclick="doubleCurrent()">Double click</button>
-<button @dblclick="resetAge()">Reset Age</button>
+<label for="description">Description</label>
+<input type="text" v-model=description>
+</div>
+<div class="body-content">
+    <h4>Title: {{title}}</h4>
+    <p>Description: {{description}}</p>
+</div>
 
-<h4>mousemove Event with XY cordinate</h4>
-<div id="canvas" @mousemove="setXY">{{x}},{{y}}</div>
+
 
 
 <!-- //! Event modifiers -->
 <!-- //! https://vuejs.org/guide/essentials/event-handling.html#key-modifiers -->
-
-<!-- the click event's propagation will be stopped -->
-<a @click.stop="doThis"> </a>
-
-<!-- the submit event will no longer reload the page -->
-<form @submit.prevent="onSubmit"></form>
-
-<!-- modifiers can be chained -->
-<a @click.stop.prevent="doThat"></a>
-
-<!-- just the modifier -->
-<form @submit.prevent></form>
-
-<!-- only trigger handler if event.target is the element itself -->
-<!-- i.e. not from a child element -->
-<div  @click.self="doThat"></div>
-
-<!-- use capture mode when adding the event listener -->
-<!-- i.e. an event targeting an inner element is handled here before being handled by that element -->
-<div @click.capture="doThis">...</div>
-
-<!-- the click event will be triggered at most once -->
-<a @click.once="doThis"></a>
-
-<!-- the scroll event's default behavior (scrolling) will happen -->
-<!-- immediately, instead of waiting for `onScroll` to complete  -->
-<!-- in case it contains `event.preventDefault()`                -->
-<div @scroll.passive="onScroll">...</div>
-
-<!-- only call `vm.submit()` when the `key` is `Enter` -->
-<input @keyup.enter="submit" />
-
-<input @keyup.page-down="onPageDown" />
-
-<!-- Alt + Enter -->
-<input @keyup.alt.enter="clear" />
-
-<!-- Ctrl + Click -->
-<div @click.ctrl="doSomething">Do something</div>
-
-<!-- this will fire even if Alt or Shift is also pressed -->
-<button @click.ctrl="onClick">A</button>
-
-<!-- this will only fire when Ctrl and no other keys are pressed -->
-<button @click.ctrl.exact="onCtrlClick">A</button>
-
-<!-- this will only fire when no system modifiers are pressed -->
-<button @click.exact="onClick">A</button>
-
-
 
 <p v-html="EventModifiers"></p>
 
