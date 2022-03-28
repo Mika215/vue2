@@ -2,25 +2,34 @@ new Vue({
 el:'#app',
 data(){
     return{
-       name:"",
-       age:null,
-       title:"",
-       description:"",
-    EventModifiers:'<a href="https://vuejs.org/guide/essentials/event-handling.html#key-modifiers">Readmore about Event Modifiers</a>',
-
-        
+       age:18,
+       a:0,
+       b:0
         
     }
 },
 methods:{
-    logName(){
+//     addToA(){
+//         console.log("addToA Clicked")
+// this.a=this.age
+//     },
+//     addToB(){
+//         console.log("addToB Clicked")
+//        this.b=this.age 
+//     }
 
-    console.log("Enter key ditected for name input")
-     
+
+
+},
+computed:{
+
+    addToA(){
+        console.log("addToA Clicked")
+this.a=this.age
     },
-   logAge(){
-    console.log("Ctrl + enter key ditected for age input")
+    addToB(){
+        console.log("addToB Clicked")
+       this.b=this.age 
     }
-  
 }
 })
