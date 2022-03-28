@@ -11,13 +11,18 @@
 </head>
 <body>
     <div id="app">
-<h1>{{greet('Afternoon')}}</h1>
-        <h3>{{message}}</h3>
-        <h5>{{objective}}</h5>
-        <p>{{dueDate}}</p>
-        <p>Checkout My : <a v-bind:href="website">website</a> </p>
-<P v-html="webSiteAsHtmlElement"></P>
-    </div>
+<h1>Events with Vue2</h1>
+
+<p>My current age:{{age}}</p>
+
+<button @click="add()">Add A year</button>
+<button v-on:click="minus()">Subtract A year</button>
+<button @dblclick="doubleCurrent()">Double click</button>
+<button @dblclick="resetAge()">Reset Age</button>
+
+<h4>mousemove Event with XY cordinate</h4>
+<div id="canvas" @mousemove="setXY">{{x}},{{y}}</div>
+</div>
 
 
 <script src="app.js"></script>

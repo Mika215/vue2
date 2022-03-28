@@ -2,23 +2,39 @@ new Vue({
 el:'#app',
 data(){
     return{
-        message:'Welcome to Vuejs2 with Mika & Ninja',
-        time:"morning",
-        objective:"Master Vue2",
-        dueDate:"28-03-2022",
-        name:"Michael",
-        website:"https://dallolmart.herokuapp.com/",
-        webSiteAsHtmlElement:'<a href="https://dallolmart.herokuapp.com/">My Website as HTML</a>'
+        age:18,
+        x:0,
+        y:0
+        
         
     }
 },
 methods:{
-    greet(time){
-        this.name='Benoit'; //to reassign a value wich has been declared above inside the data
-return 'Good' + ' ' + time + ' ' + this.name;
+    add(){
+        if(this.age<100){
+            return this.age+=1;
+        }else{
+            return this.age="101 Years? Are you an Aline?"
+        }
+     
+    },
+    minus(){
+        if(this.age>0){
+            this.age-=1
+        }
+       
+    },
+    doubleCurrent(){
+       return this.age*=2
+    },
+    resetAge(){
+        return this.age=18
+    },
+    setXY(e){
 
-
-
+        this.x=e.offsetX;
+        this.y=e.offsetY;
     }
+    
 }
 })
