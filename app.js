@@ -3,6 +3,7 @@ el:'#app',
 data(){
     return{
         age:18,
+        EventModifiers:'<a href="https://vuejs.org/guide/essentials/event-handling.html#key-modifiers">Readmore about Event Modifiers</a>',
         x:0,
         y:0
         
