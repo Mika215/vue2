@@ -2,34 +2,16 @@ new Vue({
 el:'#app',
 data(){
     return{
-       age:18,
-       a:0,
-       b:0
+      available:false,
+
         
     }
 },
 methods:{
-//     addToA(){
-//         console.log("addToA Clicked")
-// this.a=this.age
-//     },
-//     addToB(){
-//         console.log("addToB Clicked")
-//        this.b=this.age 
-//     }
+setAvailability(){
+    console.log(this.available)
+    this.available=!this.available
+}
 
-
-
-},
-computed:{
-
-    addToA(){
-        console.log("addToA Clicked")
-this.a=this.age
-    },
-    addToB(){
-        console.log("addToB Clicked")
-       this.b=this.age 
-    }
 }
 })

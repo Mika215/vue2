@@ -1,16 +1,16 @@
-#canvas {
-width:250;
-padding:200px 20px;
-text-align:center;
-border:1px red solid;
-margin:40px;
-font-size:25px;
-font-weight:700;
+span{
+    background: red;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    margin: 10px 0;
 }
 
-.body-content{
-    width:650px;
-    height:400px;
-    border:1px solid green;
-    margin:20px;
+.available span{
+    background: green;
+}
+
+.nearby span:after{
+    content: "nearby";
+    margin-left: 10px;
 }
