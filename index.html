@@ -10,11 +10,12 @@
     <title>Vue2-Ninja</title>
 </head>
 <body>
-    <div id="app">
-<h1>Dynamic Classes</h1>
-<span v-bind:class="{available:available}">Taxi</span>
+<div id="app">
+<h1>Conditionals</h1>
+<span style="background:green" v-show="logedIn">Welcome Back</span>
+<span  v-show="!logedIn">Please login if you want to continue</span>
 
-<button @click="setAvailability()">Availability</button>
+<button @click="setLogin()">{{ logedIn===true? "Logout" : "Login"}}</button>
 
 </div>
 

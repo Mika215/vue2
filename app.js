@@ -1,17 +1,14 @@
 new Vue({
-el:'#app',
-data(){
-    return{
-      available:false,
-
-        
-    }
-},
-methods:{
-setAvailability(){
-    console.log(this.available)
-    this.available=!this.available
-}
-
-}
-})
+  el: "#app",
+  data() {
+    return {
+      logedIn: false,
+    };
+  },
+  methods: {
+    setLogin() {
+      console.log(this.logedIn);
+      this.logedIn = !this.logedIn;
+    },
+  },
+});
