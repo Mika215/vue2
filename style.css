@@ -1,4 +1,4 @@
-#bag {
+#container {
   width: 200px;
   height: 500px;
   margin: 0 auto;
@@ -6,50 +6,16 @@
   background-size: 80%;
 }
 
-#bag.burst {
-  background-image: url(assets/bag-burst.png);
-}
-
-#bag-health {
-  width: 200px;
-  border: 2px solid #000;
-  margin: 0 auto 20px auto;
-}
-
-#bag-health div {
-  height: 20px;
-  background: crimson;
-}
-
-#controls {
-  width: 120px;
-  margin: 0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-
-.punch-btn {
-    background: green;
-    padding: 9px 12px;
-    width: 100%;
-    border: none;
-    margin-right:5px;
-    color:white;
-    font-weight:600;
-  }
-.restart-btn {
-  background: red;
+.btn {
+  background: green;
   padding: 9px 12px;
   width: 100%;
   border: none;
-  margin-left:5px;
-  font-weight:600;
+  margin-right: 5px;
+  color: white;
+  font-weight: 600;
 }
 
-h1{
-    margin:2% 41%;
+h1 {
+  margin: 2% 41%;
 }
-
-

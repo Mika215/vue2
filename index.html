@@ -10,25 +10,18 @@
     <title>Vue2-Ninja</title>
   </head>
   <body>
-    <div id="app">
-      <h1>PuncheBag Game</h1>
-
-      <!-- bag image -->
-      <div id="bag" :class="{burst:ended}">
-
+    <div id="app-one">
+      <h1>Components</h1>
+      <div id="container">
+        <!-- passing the greetings component into the vueinstance one(#app-one) -->
+        <Greetings></Greetings>
       </div>
-
-      <!-- bag health -->
-      <div id="bag-health">
-        <div v-bind:style="{width:health + '%'}">
-        
-        </div>
-      </div>
-
-      <!-- bag controls -->
-      <div id="controls">
-        <button class="punch-btn" v-show="!ended"  @click="punch" >Punch</button>
-        <button class="restart-btn" @click="restart">Restart</button>
+    </div>
+    <div id="app-two">
+      <h1>Components</h1>
+      <div id="container">
+        <!-- passing the greetings component into the vueinstance two(#app-two) -->
+        <Greetings></Greetings>
       </div>
     </div>
 
