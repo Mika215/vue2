@@ -2,13 +2,8 @@ new Vue({
   el: "#app",
   data() {
     return {
-      logedIn: false,
+      cars: ["Volvo", "BMW", "Ford", "Mazda"],
+      countries: ["Belgique", "PaysBas", "Almend", "France"],
     };
-  },
-  methods: {
-    setLogin() {
-      console.log(this.logedIn);
-      this.logedIn = !this.logedIn;
-    },
   },
 });

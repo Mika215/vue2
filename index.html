@@ -11,12 +11,23 @@
 </head>
 <body>
 <div id="app">
-<h1>Conditionals</h1>
-<span style="background:green" v-show="logedIn">Welcome Back</span>
-<span  v-show="!logedIn">Please login if you want to continue</span>
+<h1>Looping over an array/list </h1>
 
-<button @click="setLogin()">{{ logedIn===true? "Logout" : "Login"}}</button>
+<div>
+<h2>Brands</h2>
+<ul v-for="(car,index) in cars" :key="index">
+  <li>{{car}}</li>
+</ul
+</div>
 
+
+</div>
+<div>
+    <h2>Countries</h2>
+    <ul v-for="(country,index) in  countries" :key="index">
+    <li>{{country}}</li>
+    </ul>
+</div>
 </div>
 
 
