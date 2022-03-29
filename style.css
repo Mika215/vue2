@@ -1,16 +1,55 @@
-span{
-    background: red;
-    display: inline-block;
-    padding: 10px;
-    color: #fff;
-    margin: 10px 0;
+#bag {
+  width: 200px;
+  height: 500px;
+  margin: 0 auto;
+  background: url(assets/bag.png) center no-repeat;
+  background-size: 80%;
 }
 
-.welcome span{
+#bag.burst {
+  background-image: url(assets/bag-burst.png);
+}
+
+#bag-health {
+  width: 200px;
+  border: 2px solid #000;
+  margin: 0 auto 20px auto;
+}
+
+#bag-health div {
+  height: 20px;
+  background: crimson;
+}
+
+#controls {
+  width: 120px;
+  margin: 0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+
+.punch-btn {
     background: green;
+    padding: 9px 12px;
+    width: 100%;
+    border: none;
+    margin-right:5px;
+    color:white;
+    font-weight:600;
+  }
+.restart-btn {
+  background: red;
+  padding: 9px 12px;
+  width: 100%;
+  border: none;
+  margin-left:5px;
+  font-weight:600;
 }
 
-.nearby span:after{
-    content: "nearby";
-    margin-left: 10px;
+h1{
+    margin:2% 41%;
 }
+
+
