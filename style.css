@@ -2,7 +2,6 @@
   width: 200px;
   height: 500px;
   margin: 0 auto;
-  background: url(assets/bag.png) center no-repeat;
   background-size: 80%;
 }
 
@@ -18,4 +17,8 @@
 
 h1 {
   margin: 2% 41%;
+}
+
+.main-div {
+  opacity: 0.5;
 }

@@ -1,21 +1,16 @@
-Vue.component("Greetings", {
-  template: '<p>Hello world I am {{name}}. <button @click="changeName">Change Name</button></p>',
-  data(){
-    return{
-      name:'ReactJS'
-    }
+new Vue({
+  el: "#app",
+  data() {
+    return {
+      outPut: "Sushi",
+    };
   },
-  methods:{
- changeName(){
-   this.name='VueJs'
- }
-  }
-});
+  methods: {
+    setOutPut() {
+      // console.log(this.$refs.input.value);
+      this.outPut = this.$refs.input.value;
+            console.log(this.$refs.main.innerText);
 
-new Vue({
-  el: "#app-one",
-});
-
-new Vue({
-  el: "#app-two",
+    },
+  },
 });
